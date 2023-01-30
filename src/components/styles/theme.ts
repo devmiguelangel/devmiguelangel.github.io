@@ -68,7 +68,15 @@ export const GlobalStyles = createGlobalStyle`
     // place-items: center;
     min-height: 100vh;
     margin: 0;
-    background: ${({ theme }) => theme.colors.primary};
+    /* background: ${({ theme }) =>
+      theme.mode === 'light'
+        ? 'linear-gradient(90deg, rgba(255,253,247,1) 50%, rgba(245,233,226,1) 100%)'
+        : 'linear-gradient(90deg, rgba(54,66,89,1) 0%, rgba(26,32,44,1) 100%)'}; */
+    background: ${({ theme }) =>
+      theme.mode === 'light'
+        ? 'linear-gradient(90deg, rgba(255,253,247,1) 50%, rgba(245,233,226,1) 100%)'
+        : theme.colors.primary};
+
     color: ${({ theme }) => theme.colors.secondary};
     /* transition: background 0.2s ease-in, color 0.2s ease-in; */
   }

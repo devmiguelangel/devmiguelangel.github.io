@@ -33,5 +33,5 @@ export const SkillBox = styled.div`
   width: 100%;
   margin-top: 15px;
   font-size: 3.75rem;
-  color: ${({ theme }) => (theme.mode === 'light' ? theme.colors.mainSecondary : theme.colors.whiteSecondary )};
+  color: ${({ theme }) => (theme.mode === 'light' ? theme.colors.mainSecondary : theme.colors.whiteSecondary)};
 `;
