@@ -1,21 +1,18 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { ThemeConsumer } from 'styled-components';
-import { lightTheme } from '../styles/theme';
+import { screen } from '@testing-library/react';
 import Home from './Home';
+import { renderWithTheme } from '../../utils/themeProvider';
 
 describe('<Home />', () => {
-  ThemeConsumer._currentValue = lightTheme;
+  beforeEach(() => {
+    renderWithTheme(<Home />);
+  });
 
   test('should render title name', () => {
-    render(<Home />);
-
     expect(screen.getByText(/miguel angel/i)).toBeInTheDocument();
   });
 
   test('should render title position', () => {
-    render(<Home />);
-
     expect(screen.getByText(/software engineer/i)).toBeInTheDocument();
   });
 });

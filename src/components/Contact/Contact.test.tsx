@@ -1,13 +1,11 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { ThemeConsumer } from 'styled-components';
+import { screen } from '@testing-library/react';
 import Contact from './Contact';
-import { lightTheme } from '../styles/theme';
+import { renderWithTheme } from '../../utils/themeProvider';
 
 describe('<Contact />', () => {
   beforeEach(() => {
-    ThemeConsumer._currentValue = lightTheme;
-    render(<Contact />);
+    renderWithTheme(<Contact />);
   });
 
   test('should render title', () => {

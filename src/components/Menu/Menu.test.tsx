@@ -1,13 +1,11 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { ThemeConsumer } from 'styled-components';
-import { lightTheme } from '../styles/theme';
+import { screen } from '@testing-library/react';
 import Menu from './Menu';
+import { renderWithTheme } from '../../utils/themeProvider';
 
 describe('<Menu />', () => {
   test('should render component', () => {
-    ThemeConsumer._currentValue = lightTheme;
-    render(<Menu />);
+    renderWithTheme(<Menu />);
 
     expect(screen.getByText(/home/i)).toBeInTheDocument();
     expect(screen.getByText(/about/i)).toBeInTheDocument();

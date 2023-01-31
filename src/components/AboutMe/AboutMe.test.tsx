@@ -1,13 +1,11 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { ThemeConsumer } from 'styled-components';
-import { lightTheme } from '../styles/theme';
+import { screen } from '@testing-library/react';
 import AboutMe from './AboutMe';
+import { renderWithTheme } from '../../utils/themeProvider';
 
 describe('<AboutMe />', () => {
   beforeEach(() => {
-    ThemeConsumer._currentValue = lightTheme;
-    render(<AboutMe />);
+    renderWithTheme(<AboutMe />);
   });
 
   test('should render title', () => {
