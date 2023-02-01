@@ -6,8 +6,12 @@ on:
       - main
 
 jobs:
-  lint:
+  setup:
     uses: ./.github/workflows/action.yml
+
+  lint:
+    needs: setup
+    runs-on: ubuntu-latest
     steps:
       - name: Lint code
         run: npm run lint
