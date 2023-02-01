@@ -49,9 +49,6 @@ jobs:
         run: |
           git config --global user.email "${GITHUB_ACTOR}"
           git config --global user.name "me@miguelangeldev.com"
-          git fetch --all
-          git checkout gh-pages
-          git merge "$DEFAULT_BRANCH" --no-edit --allow-unrelated-histories
           git status
           npm run build
           cd dist
