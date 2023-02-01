@@ -51,6 +51,7 @@ jobs:
         run: |
           git config --global user.email "${GITHUB_ACTOR}"
           git config --global user.name "me@miguelangeldev.com"
+          git fetch --all
           git status
           npm run build
           cd dist
