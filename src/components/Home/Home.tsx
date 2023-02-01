@@ -19,7 +19,7 @@ const Home: React.FC = () => {
         <br />
         <Title weight="bold" color={theme.colors.main}>
           Software Engineer
-          <br /> & Product Designer
+          {/* <br /> & Product Designer */}
         </Title>
       </p>
     </S.HomeView>
