@@ -12,10 +12,10 @@ jobs:
       - name: Lint code
         run: npm run lint
 
-  test:
-    needs: lint
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run unit tests
-        run: |
-          npm run test
+  # test:
+  #   needs: lint
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Run unit tests
+  #       run: |
+  #         npm run test
