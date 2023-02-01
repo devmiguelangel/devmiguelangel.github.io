@@ -43,5 +43,7 @@ jobs:
         run: npm ci
 
       - name: Publish to GH Pages
-        run: ./deploy.sh
+        run: |
+          chmod +x ./deploy.sh
+          ./deploy.sh
         shell: bash
