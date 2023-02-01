@@ -7,7 +7,7 @@ on:
 
 jobs:
   lint:
-    uses: ./.github/workflows/template/action.yml
+    uses: ./.github/workflows/deploy/action.yml
     steps:
       - name: Lint code
         run: npm run lint
