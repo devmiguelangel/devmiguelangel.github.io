@@ -51,13 +51,13 @@ jobs:
         run: |
           git config --global user.email "${GITHUB_ACTOR}"
           git config --global user.name "me@miguelangeldev.com"
-          git fetch --all
+          git checkout ${DEFAULT_BRANCH}
           git status
           npm run build
           cd dist
           echo > .nojekyll
           cd -
-          git add -A
           git add dist -f
           git commit -m 'deploy'
+          git push origin -d gh-pages
           git subtree push --prefix dist origin gh-pages
