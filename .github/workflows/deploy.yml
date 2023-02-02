@@ -9,8 +9,9 @@ env:
   DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -30,33 +31,29 @@ jobs:
         run: |
           npm run test
 
+      - name: Build project
+        run: npm run build
+
+      - name: Upload build files
+        uses: actions/upload-artifact@v3
+        with:
+          name: production-files
+          path: ./dist
+
   deploy:
-    needs: test
+    needs: build
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Download build files
+        uses: actions/download-artifact@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          name: production-files
+          path: ./dist
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          node-version: '18'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Publish to GH Pages
-        run: |
-          git config --global user.email "${GITHUB_ACTOR}"
-          git config --global user.name "me@miguelangeldev.com"
-          git checkout ${DEFAULT_BRANCH}
-          git status
-          npm run build
-          cd dist
-          echo > .nojekyll
-          cd -
-          git add dist -f
-          git commit -m 'deploy'
-          git subtree push --prefix dist origin gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
