@@ -14,7 +14,7 @@ const Home: React.FC = () => {
         <br />
 
         <Title>I&apos;m </Title>
-        <Title weight="bold">Miguel Angelooooo</Title>
+        <Title weight="bold">Miguel Angel</Title>
 
         <br />
         <Title weight="bold" color={theme.colors.main}>
