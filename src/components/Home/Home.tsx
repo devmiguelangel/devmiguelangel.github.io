@@ -14,12 +14,12 @@ const Home: React.FC = () => {
         <br />
 
         <Title>I&apos;m </Title>
-        <Title weight="bold">Miguel Angel</Title>
+        <Title weight="bold">Miguel Angelooooo</Title>
 
         <br />
         <Title weight="bold" color={theme.colors.main}>
           Software Engineer
-          {/* <br /> & Product Designer */}
+          <br /> & Product Designer
         </Title>
       </p>
     </S.HomeView>
