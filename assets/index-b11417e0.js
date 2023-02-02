@@ -67,7 +67,7 @@ Error generating stack: `+o.message+`
   font-size: ${e=>e.size?md[e.size]:"2.25rem"};
   font-weight: ${e=>e.weight?hd[e.weight]:400};
   color: ${e=>e.color||"inherit"};
-`,et=({children:e,...t})=>C(Xh,{...t,children:e}),Zh=()=>{const e=Hr();return C(Kh,{id:"home",children:ce("p",{children:[C(et,{children:"Hi,"}),C("br",{}),C(et,{children:"I'm "}),C(et,{weight:"bold",children:"Miguel Angelooooo"}),C("br",{}),ce(et,{weight:"bold",color:e.colors.main,children:["Software Engineer",C("br",{})," & Product Designer"]})]})})},Jh=ne.header`
+`,et=({children:e,...t})=>C(Xh,{...t,children:e}),Zh=()=>{const e=Hr();return C(Kh,{id:"home",children:ce("p",{children:[C(et,{children:"Hi,"}),C("br",{}),C(et,{children:"I'm "}),C(et,{weight:"bold",children:"Miguel Angel"}),C("br",{}),ce(et,{weight:"bold",color:e.colors.main,children:["Software Engineer",C("br",{})," & Product Designer"]})]})})},Jh=ne.header`
   position: fixed;
   top: 0;
   display: flex;
