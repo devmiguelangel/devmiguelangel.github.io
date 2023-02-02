@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-enum ISize {
+export enum ISize {
   '4x-large' = '4rem',
   '3x-large' = '3rem',
   '2x-large' = '2.25rem',

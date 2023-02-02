@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+// Styles
+import { devices } from '../styles/devices';
 
 interface HeaderProps {
   isMenuOpen: boolean;
@@ -17,6 +19,18 @@ export const Header = styled.header<HeaderProps>`
     isMenuOpen ? (theme.mode === 'light' ? theme.colors.main : theme.colors.dimmed) : 'none'};
   border-bottom-left-radius: 187px;
   z-index: 1;
+
+  @media ${devices.tablet} {
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    background: ${({ theme }) =>
+      theme.mode === 'dark'
+        ? theme.colors.primary
+        : 'linear-gradient(90deg, rgba(255,253,247,1) 50%, rgba(245,233,226,1) 100%)'};
+    border-radius: 0;
+  }
 `;
 
 interface MenuIconProps {
@@ -53,4 +67,10 @@ export const ModeIcon = styled.div`
   border-radius: 50%;
   color: ${({ theme }) => theme.colors.white};
   cursor: pointer;
+
+  @media ${devices.tablet} {
+    position: relative;
+    margin: 0 44px 0 40px;
+    color: inherit;
+  }
 `;

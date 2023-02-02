@@ -1,9 +1,15 @@
 import styled from 'styled-components';
+// Styles
+import { devices } from '../styles/devices';
 
 export const Nav = styled.nav`
   /* position: absolute; */
   display: flex;
   width: 100%;
+
+  @media ${devices.tablet} {
+    width: auto;
+  }
 `;
 
 export const List = styled.ul`
@@ -24,6 +30,15 @@ export const List = styled.ul`
       margin-bottom: 0;
     }
   }
+
+  @media ${devices.tablet} {
+    flex-direction: row;
+    width: auto;
+
+    & > li {
+      margin-bottom: 0;
+    }
+  }
 `;
 
 export const Link = styled.a`
@@ -36,4 +51,14 @@ export const Link = styled.a`
   font-weight: 300;
   color: ${({ theme }) => theme.colors.white};
   text-decoration: none;
+
+  @media ${devices.tablet} {
+    min-width: 180px;
+    font-size: 1.25rem;
+    color: inherit;
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.main};
+    }
+  }
 `;
