@@ -7,6 +7,7 @@ const Style = css`
   border-radius: 10px;
   border: 0 none;
   gap: 10px;
+  font-family: inherit;
   font-size: 1.3rem;
   font-weight: 500;
   color: ${({ theme }) => theme.colors.white};

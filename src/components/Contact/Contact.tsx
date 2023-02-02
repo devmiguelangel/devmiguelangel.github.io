@@ -2,14 +2,16 @@ import React from 'react';
 import { useTheme } from 'styled-components';
 // Components
 import * as S from './Contact.styles';
-import { Title, Text, Button } from '../shared';
+import { Text, Button } from '../shared';
 
 const Contact: React.FC = () => {
   const theme = useTheme();
 
   return (
     <S.ContactView id="contact">
-      <Title color={theme.colors.main}>Contact</Title>
+      <Text size="2x-large" weight="semibold" color={theme.colors.main}>
+        Contact
+      </Text>
 
       <S.Form action="#" name="contact">
         <S.Input type="text" name="name" placeholder="Your name" aria-label="name" />
@@ -23,9 +25,9 @@ const Contact: React.FC = () => {
       </S.Form>
 
       <S.MailLink href="mailto:me@miguelangeldev.com">
-        <Title size="base" weight="semibold">
+        <Text size="medium" weight="semibold">
           me@miguelangeldev.com
-        </Title>
+        </Text>
       </S.MailLink>
 
       <S.IconBox>

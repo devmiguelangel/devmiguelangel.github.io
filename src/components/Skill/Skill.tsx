@@ -2,7 +2,7 @@ import React from 'react';
 import { useTheme } from 'styled-components';
 // Components
 import * as S from './Skill.styles';
-import { Title } from '../shared';
+import { Text } from '../shared';
 // Styles
 import 'devicon/devicon.min.css';
 
@@ -13,13 +13,15 @@ const Skill: React.FC = () => {
 
   return (
     <S.View>
-      <Title color={theme.colors.main}>Skills</Title>
+      <Text size="2x-large" weight="semibold" color={theme.colors.main}>
+        Skills
+      </Text>
       <br />
 
       <S.SkillView>
-        <Title size="medium" color={colorTitleSkill}>
+        <Text size="medium" weight="semibold" color={colorTitleSkill}>
           Software Development
-        </Title>
+        </Text>
         <S.SkillBox>
           <i className="devicon-javascript-plain"></i>
           <i className="devicon-react-original"></i>
@@ -30,9 +32,9 @@ const Skill: React.FC = () => {
       </S.SkillView>
 
       <S.SkillView>
-        <Title size="medium" color={colorTitleSkill}>
+        <Text size="medium" weight="semibold" color={colorTitleSkill}>
           Databases
-        </Title>
+        </Text>
         <S.SkillBox>
           <i className="devicon-mysql-plain"></i>
           <i className="devicon-postgresql-plain"></i>
@@ -42,9 +44,9 @@ const Skill: React.FC = () => {
       </S.SkillView>
 
       <S.SkillView>
-        <Title size="medium" color={colorTitleSkill}>
+        <Text size="medium" weight="semibold" color={colorTitleSkill}>
           CI / CD
-        </Title>
+        </Text>
         <S.SkillBox>
           <i className="devicon-docker-plain"></i>
           <i className="devicon-github-original"></i>
@@ -55,9 +57,9 @@ const Skill: React.FC = () => {
       </S.SkillView>
 
       <S.SkillView>
-        <Title size="medium" color={colorTitleSkill}>
+        <Text size="medium" weight="semibold" color={colorTitleSkill}>
           Mobile
-        </Title>
+        </Text>
         <S.SkillBox>
           <i className="devicon-react-original"></i>
           <i className="devicon-swift-plain"></i>

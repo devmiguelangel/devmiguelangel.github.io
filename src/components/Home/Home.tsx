@@ -2,7 +2,7 @@ import React from 'react';
 import { useTheme } from 'styled-components';
 // Components
 import * as S from './Home.styles';
-import Title from '../shared/Title';
+import { Text } from '../shared';
 
 const Home: React.FC = () => {
   const theme = useTheme();
@@ -10,17 +10,19 @@ const Home: React.FC = () => {
   return (
     <S.HomeView id="home">
       <p>
-        <Title>Hi,</Title>
+        <Text size="x-large">Hi,</Text>
         <br />
 
-        <Title>I&apos;m </Title>
-        <Title weight="bold">Miguel Angel</Title>
-
+        <Text size="2x-large">I&apos;m </Text>
+        <Text size="2x-large" weight="bold">
+          Miguel Angel
+        </Text>
         <br />
-        <Title weight="bold" color={theme.colors.main}>
+
+        <Text size="2x-large" weight="bold" color={theme.colors.main}>
           Software Engineer
           <br /> & Product Designer
-        </Title>
+        </Text>
       </p>
     </S.HomeView>
   );

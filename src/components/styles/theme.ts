@@ -48,7 +48,7 @@ export const darkTheme: DefaultTheme = {
 // Global styles
 export const GlobalStyles = createGlobalStyle`
   :root {
-    font-family: Inter;
+    font-family: NunitoSans, sans-serif;
     font-size: 16px;
     font-weight: 400;
 
