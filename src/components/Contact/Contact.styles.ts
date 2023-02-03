@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { devices } from '../styles/devices';
 
 export const ContactView = styled.section`
   display: flex;
@@ -14,6 +15,14 @@ export const Form = styled.form`
   flex-direction: column;
   align-items: center;
   width: 80%;
+
+  @media ${devices.tablet} {
+    width: 60%;
+  }
+
+  @media ${devices.laptop} {
+    width: 40%;
+  }
 `;
 
 const Field = css`
@@ -32,6 +41,14 @@ const Field = css`
   font-weight: 300;
   color: ${({ theme }) => theme.colors.secondary};
   outline: none;
+
+  @media ${devices.tablet} {
+    font-size: 1.4rem;
+  }
+
+  @media ${devices.laptop} {
+    font-size: 1.1rem;
+  }
 `;
 
 export const Input = styled.input`
@@ -59,6 +76,10 @@ export const IconBox = styled.div`
   justify-content: space-evenly;
   width: 100%;
   padding: 30px 0;
+
+  @media ${devices.tablet} {
+    justify-content: center;
+  }
 `;
 
 export const Icon = styled.a`
@@ -72,4 +93,12 @@ export const Icon = styled.a`
   font-size: 2.25rem;
   color: inherit;
   text-decoration: none;
+
+  @media ${devices.tablet} {
+    margin-right: 50px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 `;
