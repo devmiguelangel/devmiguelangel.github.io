@@ -53,12 +53,19 @@ export const Link = styled.a`
   text-decoration: none;
 
   @media ${devices.tablet} {
-    min-width: 180px;
+    min-width: 0;
+    padding-left: 30px;
+    padding-right: 30px;
     font-size: 1.25rem;
     color: inherit;
 
     &:hover {
       color: ${({ theme }) => theme.colors.main};
     }
+  }
+
+  @media ${devices.laptop} {
+    min-width: 180px;
+    box-sizing: border-box;
   }
 `;

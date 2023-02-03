@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+// Styles
+import { devices } from '../styles/devices';
 
 export const View = styled.section`
   display: flex;
@@ -9,8 +11,21 @@ export const View = styled.section`
   padding-top: 95px;
 `;
 
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  @media ${devices.laptop} {
+    flex-direction: row;
+    width: 80%;
+  }
+`;
+
 export const Picture = styled.picture`
   display: block;
+  min-width: 280px;
   width: 280px;
   height: 280px;
   margin: 40px 0;
@@ -25,7 +40,22 @@ export const Picture = styled.picture`
   }
 `;
 
-export const Introduce = styled.p`
+export const IntroduceBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 90%;
+
+  @media ${devices.laptop} {
+    align-items: flex-start;
+    margin-left: 50px;
+  }
+`;
+
+export const Introduce = styled.p`
   text-align: center;
+
+  @media ${devices.laptop} {
+    text-align: left;
+  }
 `;

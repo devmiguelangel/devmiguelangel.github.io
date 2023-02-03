@@ -18,53 +18,55 @@ const Skill: React.FC = () => {
       </Text>
       <br />
 
-      <S.SkillView>
-        <Text size="medium" weight="semibold" color={colorTitleSkill}>
-          Software Development
-        </Text>
-        <S.SkillBox>
-          <i className="devicon-javascript-plain"></i>
-          <i className="devicon-react-original"></i>
-          <i className="devicon-graphql-plain"></i>
-          <i className="devicon-python-plain"></i>
-          <i className="devicon-nodejs-plain"></i>
-        </S.SkillBox>
-      </S.SkillView>
+      <S.SkillWrapper>
+        <S.SkillView>
+          <Text size="medium" weight="semibold" color={colorTitleSkill}>
+            Software Development
+          </Text>
+          <S.SkillBox>
+            <i className="devicon-javascript-plain"></i>
+            <i className="devicon-react-original"></i>
+            <i className="devicon-graphql-plain"></i>
+            <i className="devicon-python-plain"></i>
+            <i className="devicon-nodejs-plain"></i>
+          </S.SkillBox>
+        </S.SkillView>
 
-      <S.SkillView>
-        <Text size="medium" weight="semibold" color={colorTitleSkill}>
-          Databases
-        </Text>
-        <S.SkillBox>
-          <i className="devicon-mysql-plain"></i>
-          <i className="devicon-postgresql-plain"></i>
-          <i className="devicon-mongodb-plain"></i>
-          <i className="devicon-apachekafka-original"></i>
-        </S.SkillBox>
-      </S.SkillView>
+        <S.SkillView>
+          <Text size="medium" weight="semibold" color={colorTitleSkill}>
+            Databases
+          </Text>
+          <S.SkillBox>
+            <i className="devicon-mysql-plain"></i>
+            <i className="devicon-postgresql-plain"></i>
+            <i className="devicon-mongodb-plain"></i>
+            <i className="devicon-apachekafka-original"></i>
+          </S.SkillBox>
+        </S.SkillView>
 
-      <S.SkillView>
-        <Text size="medium" weight="semibold" color={colorTitleSkill}>
-          CI / CD
-        </Text>
-        <S.SkillBox>
-          <i className="devicon-docker-plain"></i>
-          <i className="devicon-github-original"></i>
-          <i className="devicon-argocd-plain"></i>
-          <i className="devicon-kubernetes-plain"></i>
-          <i className="devicon-amazonwebservices-original"></i>
-        </S.SkillBox>
-      </S.SkillView>
+        <S.SkillView>
+          <Text size="medium" weight="semibold" color={colorTitleSkill}>
+            CI / CD
+          </Text>
+          <S.SkillBox>
+            <i className="devicon-docker-plain"></i>
+            <i className="devicon-github-original"></i>
+            <i className="devicon-argocd-plain"></i>
+            <i className="devicon-kubernetes-plain"></i>
+            <i className="devicon-amazonwebservices-original"></i>
+          </S.SkillBox>
+        </S.SkillView>
 
-      <S.SkillView>
-        <Text size="medium" weight="semibold" color={colorTitleSkill}>
-          Mobile
-        </Text>
-        <S.SkillBox>
-          <i className="devicon-react-original"></i>
-          <i className="devicon-swift-plain"></i>
-        </S.SkillBox>
-      </S.SkillView>
+        <S.SkillView>
+          <Text size="medium" weight="semibold" color={colorTitleSkill}>
+            Mobile
+          </Text>
+          <S.SkillBox>
+            <i className="devicon-react-original"></i>
+            <i className="devicon-swift-plain"></i>
+          </S.SkillBox>
+        </S.SkillView>
+      </S.SkillWrapper>
     </S.View>
   );
 };
